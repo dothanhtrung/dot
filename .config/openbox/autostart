@@ -1,0 +1,10 @@
+/usr/bin/VBoxClient --display &
+/usr/bin/tint2	&
+if [ -f /usr/bin/urxvt256c-mld ]; then
+	/usr/bin/urxvt256c-mld -q -o &
+else
+	/usr/bin/urxvtd -q -o &
+fi
+/usr/bin/fcitx &
+xrdb -merge ~/.Xresources &
+/usr/bin/feh --bg-max ~/Pictures/wallpaper &

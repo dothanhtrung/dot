@@ -1,0 +1,82 @@
+! ============= Xterm ============
+XTerm*utf8: 1
+XTerm*selectToClipboard: true
+xterm*loginshell: true
+xterm*ScrollBar: false
+*transparent:   true
+*shading:       10
+xterm*borderWidth: 0
+
+*background: rgb:00/00/00
+*foreground: rgb:ff/ff/ff
+*color0:     rgb:00/00/00
+*color1:     rgb:d3/62/65
+*color2:     rgb:ae/ce/91
+*color3:     rgb:e7/e1/8c
+*color4:     rgb:7a/7a/b0
+*color5:     rgb:96/3c/59
+*color6:     rgb:41/81/79
+*color7:     rgb:be/be/be
+*color8:     rgb:66/66/66
+*color9:     rgb:ef/81/71
+*color10:    rgb:e5/f7/79
+*color11:    rgb:ff/f7/96
+*color12:    rgb:41/86/be
+*color13:    rgb:ef/9e/be
+*color14:    rgb:71/be/be
+*color15:    rgb:ff/ff/ff
+
+*pointerColor: white
+*pointerColorBackground: black
+*cursorColor: yellow
+*cursorBlink: true
+
+*font: -*-terminus-medium-*-*-*-12-*-*-*-*-*-iso10646-*
+
+
+! Run urxvt as a login shell
+URxvt*loginShell: true
+
+! xterm*faceName: Inconsolata:size=9:antialias=true
+! xterm*font: 7x13
+!urxvt*boldFont: xft:Terminus:size=9
+!URxvt.font: xft:Inconsolata:pixelsize=12,xft:Inconsolata\ for\ Powerline:pixelsize=12
+!URxvt.font:         -*-yuki-*-*-*-*-*-*-*-*-*-*-*-*
+!URxvt.boldFont:     -*-yuki-*-*-*-*-*-*-*-*-*-*-*-*
+
+!URxvt.letterSpace: 1
+
+!urxvt extensions:
+
+!URxvt.perl-ext-common:  default,matcher,tabbed,clipboard
+URxvt.perl-ext-common:  default,matcher,tabbed
+
+!binding keys for copy, paste
+URxvt.iso14755: false
+!URxvt.keysym.Shift-Control-C: perl:clipboard:copy
+!URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+!URxvt.clipboard.copycmd:  xsel -ib
+!URxvt.clipboard.pastecmd: xsel -ob
+
+!enabling clickable links:
+
+! URxvt.urlLauncher:      /usr/bin/firefox
+! URxvt.matcher.button:   1 
+
+!urxvt scrolling options and cursor style:
+
+URxvt*saveLines: 12000
+URxvt*scrollstyle:plain
+URxvt*scrollBar: false
+URxvt*cursorBlink: true
+URxvt*cursorUnderline: false
+
+! urxvt tabs settings:
+
+URxvt.tabbed.tabbar-fg: 2
+URxvt.tabbed.tabbar-bg: 0
+URxvt.tabbed.tab-fg: 2
+URxvt.tabbed.tab-bg: 8
+! URxvt.tabbed.autohide:  yes
+! URxvt.tabbed.new-button:  no
+URxvt.tabbed.title: yes
