@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Icon=minecraft
+Comment=Minecraft
+Terminal=false
+Categories=Applications;Game
+Name=Minecraft
+Exec=minecraft
