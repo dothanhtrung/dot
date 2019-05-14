@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# Clean containers
+docker rm $(docker ps -qa --no-trunc --filter "status=exited")
+
+# Clean volumes
+docker volume ls -qf dangling=true | xargs -r docker volume rm
+
+# Clean images
+docker rmi $(docker images --filter "dangling=true" -q --no-trunc)
+docker rmi $(docker images | grep "none" | awk '/ / { print $3 }')
+
+# Clean networks
+docker network rm $(docker network ls | grep "bridge" | awk '/ / { print $1 }')
+
+# 
+docker system prune -a
