@@ -1,2 +1,2 @@
 #!/bin/bash
-youtube-dl --audio-format m4a --extract-audio --audio-quality 0 $1
+youtube-dl --no-mtime --audio-format m4a --extract-audio --audio-quality 0 $1
