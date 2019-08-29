@@ -1,2 +1,2 @@
 #!/bin/sh
-killall plasmashell && kstart plasmashell
+killall plasmashell && kstart5 plasmashell
