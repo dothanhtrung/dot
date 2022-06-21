@@ -1,6 +1,5 @@
-alias vi="nvim"
-alias vless="vim -u /usr/share/vim/vim74/macros/less.vim -"
-alias vmore="vim -u /usr/share/vim/vim74/macros/less.vim"
+alias less="vim -u /usr/share/vim/vim74/macros/less.vim -"
+alias more="vim -u /usr/share/vim/vim74/macros/less.vim"
 
 alias '...'='cd ../..'
 alias '....'='cd ../../..'
@@ -9,3 +8,6 @@ alias hibernate="sudo systemctl hibernate"
 
 alias la="ls -a"
 alias ll="ls -l"
+
+alias dd="dd status=progress"
+alias rsync="rsync --progress"
