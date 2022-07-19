@@ -1,0 +1,14 @@
+[Desktop Entry]
+Type=Service
+X-KDE-ServiceTypes=KonqPopupMenu/Plugin
+MimeType=text/vnd.graphviz;
+Actions=dot2png;
+X-KDE-AuthorizeAction=shell_access
+
+[Desktop Action dot2png]
+TryExec=dot -?
+Exec=dot -Tpng %f > %f.png
+Icon=utilities-terminal
+
+Name=Convert to Image
+Comment=Convert Graphviz dot to Image
