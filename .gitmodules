@@ -1,0 +1,24 @@
+[submodule ".vim/pack/vendor/start/ale"]
+	path = .vim/pack/vendor/start/ale
+	url = https://github.com/dense-analysis/ale
+[submodule ".vim/pack/vendor/start/braceless.vim"]
+	path = .vim/pack/vendor/start/braceless.vim
+	url = https://github.com/tweekmonster/braceless.vim
+[submodule ".vim/pack/vendor/start/nerdtree"]
+	path = .vim/pack/vendor/start/nerdtree
+	url = https://github.com/preservim/nerdtree.git
+[submodule ".vim/pack/vendor/start/qt-support.vim"]
+	path = .vim/pack/vendor/start/qt-support.vim
+	url = https://github.com/fedorenchik/qt-support.vim.git
+[submodule ".vim/pack/vendor/start/vim-airline"]
+	path = .vim/pack/vendor/start/vim-airline
+	url = https://github.com/vim-airline/vim-airline
+[submodule ".vim/pack/vendor/start/vim-airline-themes"]
+	path = .vim/pack/vendor/start/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes
+[submodule ".vim/pack/vendor/start/vim-cpp-modern"]
+	path = .vim/pack/vendor/start/vim-cpp-modern
+	url = https://github.com/bfrg/vim-cpp-modern
+[submodule ".vim/pack/vendor/start/vim-gruvbox8"]
+	path = .vim/pack/vendor/start/vim-gruvbox8
+	url = https://github.com/lifepillar/vim-gruvbox8
