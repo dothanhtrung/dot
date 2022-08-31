@@ -22,3 +22,9 @@
 [submodule ".vim/pack/vendor/start/vim-gruvbox8"]
 	path = .vim/pack/vendor/start/vim-gruvbox8
 	url = https://github.com/lifepillar/vim-gruvbox8
+[submodule ".oh-my-zsh"]
+	path = .oh-my-zsh
+	url = https://github.com/ohmyzsh/ohmyzsh.git
+[submodule ".vim/pack/vendor/start/rust.vim"]
+	path = .vim/pack/vendor/start/rust.vim
+	url = https://github.com/rust-lang/rust.vim

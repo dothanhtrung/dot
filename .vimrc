@@ -1,15 +1,10 @@
-" color koehler
-
-let base16colorspace=256 " Access colors present in 256 colorspace
-"colorscheme base16-default
 set background=dark
 
 set nu
 
 " Enable filetype plugins
-" filetype plugin on
-" filetype indent on
-"
+filetype plugin indent on
+
 " Turn backup off
 set nobackup
 set nowb
@@ -46,10 +41,26 @@ function! XTermPasteBegin()
   return ""
 endfunction
 
-":set listchars=eol:¬,tab:>-,trail:~,extends:>,precedes:<,space:.
-":set list
+set listchars=eol:¬,tab:>—,trail:~,extends:>,precedes:<,space:·
+set list
 
 autocmd vimenter * ++nested colorscheme gruvbox8_hard
 
 " Airline
 let g:airline_theme='base16_gruvbox_dark_hard'
+
+" Ale
+set completeopt=menu,menuone,preview,noselect,noinsert
+let g:ale_completion_enabled = 1
+nnoremap <C-LeftMouse> :ALEGoToDefinition<CR>
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'javascript': ['eslint'],
+\   'rust': ['rustfmt'],
+\}
+let g:ale_linters = {
+\  'rust': ['analyzer'],
+\}
+
+" Rust
+let g:rustfmt_autosave = 1

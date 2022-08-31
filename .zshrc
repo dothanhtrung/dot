@@ -112,11 +112,11 @@ if [ -f $ZSH/custom/bash_completion_reuse ]; then
 	done
 fi
 if [ -f $HOME/.aliases ]; then
-        . $HOME/.aliases
+	. $HOME/.aliases
 fi
 
 export JAVA_HOME=/usr/lib/jvm/java-openjdk
-export QT_LOGGING_RULES="*.debug=true;*.event*=false;*.cache=false;*.input*=false;*.wayland*=false;*i18n=false;*font*=false;qt.qpa*=false"
+#export QT_LOGGING_RULES="*.debug=true;*.event*=false;*.cache=false;*.input*=false;*.wayland*=false;*i18n=false;*font*=false;qt.qpa*=false"
 
 export HISTSIZE=10000
 
