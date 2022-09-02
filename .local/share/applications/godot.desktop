@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Icon=godot
+Comment=Godot
+Terminal=false
+Categories=Applications;Development
+Name=Godot
+Exec=godot
