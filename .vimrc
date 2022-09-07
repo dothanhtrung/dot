@@ -12,6 +12,8 @@ set noswapfile
 
 " Highlight search results
 set hlsearch
+"hi Search ctermbg=LightYellow
+"hi Search ctermfg=Red
 
 " Enable syntax highlighting
 syntax enable
