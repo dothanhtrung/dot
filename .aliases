@@ -1,5 +1,5 @@
-alias less="vim -u /usr/share/vim/vim*/macros/less.vim -"
-alias more="vim -u /usr/share/vim/vim*/macros/less.vim"
+alias less="vim -u ~/.vim/less.vim -"
+alias more="vim -u ~/.vim/less.vim"
 
 alias '...'='cd ../..'
 alias '....'='cd ../../..'
