@@ -66,3 +66,6 @@ let g:ale_linters = {
 
 " Rust
 let g:rustfmt_autosave = 1
+
+" Tagbar
+nmap <F8> :TagbarToggle<CR>

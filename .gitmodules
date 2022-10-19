@@ -31,3 +31,6 @@
 [submodule ".vim/pack/vendor/start/vim-log-highlighting"]
 	path = .vim/pack/vendor/start/vim-log-highlighting
 	url = https://github.com/MTDL9/vim-log-highlighting
+[submodule ".vim/pack/vendor/start/tagbar"]
+	path = .vim/pack/vendor/start/tagbar
+	url = https://github.com/preservim/tagbar

@@ -16,3 +16,5 @@ alias ll="ls -l"
 
 alias dd="dd status=progress"
 alias rsync="rsync --progress"
+alias icat="kitty +kitten icat"
+
