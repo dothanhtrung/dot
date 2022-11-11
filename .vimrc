@@ -46,7 +46,8 @@ endfunction
 set listchars=eol:¬,tab:>—,trail:~,extends:>,precedes:<,space:·
 set list
 
-autocmd vimenter * ++nested colorscheme gruvbox8_hard
+#autocmd vimenter * ++nested colorscheme gruvbox8_hard
+colorscheme gruvbox8_hard
 
 " Airline
 let g:airline_theme='base16_gruvbox_dark_hard'
