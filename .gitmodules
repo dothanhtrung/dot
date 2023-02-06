@@ -34,3 +34,6 @@
 [submodule ".vim/pack/vendor/start/tagbar"]
 	path = .vim/pack/vendor/start/tagbar
 	url = https://github.com/preservim/tagbar
+[submodule ".vim/pack/vendor/start/vim-buftabline"]
+	path = .vim/pack/vendor/start/vim-buftabline
+	url = https://github.com/ap/vim-buftabline
