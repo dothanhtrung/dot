@@ -1,0 +1,12 @@
+{
+    "workbench.colorTheme": "Gruvbox Dark Hard",
+    "mesonbuild.buildFolder": "build",
+    "editor.fontSize": 13,
+    "cmake.configureOnOpen": false,
+    "editor.renderWhitespace": "all", 
+    "editor.minimap.autohide": true,
+    "editor.fontFamily": "'Source Code Pro', 'monospace', monospace",
+    "cmake.buildDirectory": "${workspaceFolder}/cmake-build/${buildKit}/${buildType}",
+    "cmake.copyCompileCommands": "${workspaceFolder}/compile_commands.json",
+    "editor.inlayHints.fontSize": 12
+}
