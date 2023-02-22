@@ -1,0 +1,16 @@
+diff --color -Nuar .vscode-oss/extensions/jdinhlife.gruvbox-1.8.0/themes/gruvbox-dark-hard.json .vscode/extensions/jdinhlife.gruvbox-1.8.0/themes/gruvbox-dark-hard.json
+--- .vscode-oss/extensions/jdinhlife.gruvbox-1.8.0/themes/gruvbox-dark-hard.json	2022-09-23 09:14:24.968819621 +0700
++++ .vscode/extensions/jdinhlife.gruvbox-1.8.0/themes/gruvbox-dark-hard.json	2022-12-15 10:59:35.170473211 +0700
+@@ -900,8 +900,10 @@
+     "scrollbarSlider.hoverBackground": "#665c54",
+     "scrollbarSlider.background": "#50494599",
+     // BADGE
+-    "badge.background": "#d3869b",
+-    "badge.foreground": "#1d2021",
++    //"badge.background": "#d3869b",
++    //"badge.foreground": "#1d2021",
++    "badge.background": "#282828",
++    "badge.foreground": "#928374",
+     // PROGRESS BAR
+     "progressBar.background": "#689d6a",
+     // LISTS AND TREES
