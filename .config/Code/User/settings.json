@@ -5,9 +5,7 @@
 		"editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
 	},
 	"C_Cpp.inlayHints.parameterNames.enabled": true,
-	"editor.fontSize": 13,
 	"editor.fontFamily": "'Source Code Pro', 'monospace', monospace",
-	"workbench.iconTheme": "vscode-icons",
 	"telemetry.telemetryLevel": "off",
 	"C_Cpp.inlayHints.parameterNames.hideLeadingUnderscores": false,
 	"C_Cpp.inlayHints.referenceOperator.enabled": true,
@@ -17,7 +15,7 @@
 	"vsicons.dontShowNewVersionMessage": true,
 	"cmake.configureOnOpen": false,
 	"mesonbuild.buildFolder": ".vscode-build",
-	"editor.inlayHints.fontSize": 12,
+	"editor.inlayHints.fontSize": 11,
 	"editor.codeActionsOnSave": {},
 	"editor.minimap.enabled": false,
 	"debug.allowBreakpointsEverywhere": true,
@@ -30,19 +28,16 @@
 	"C_Cpp.intelliSenseEngine": "disabled",
 	"C_Cpp.codeAnalysis.clangTidy.enabled": true,
 	"clangd.arguments": [
-		"-pretty",
+		"--pretty",
 		"--background-index"
 	],
 	"cmake.copyCompileCommands": "${workspaceFolder}/compile_commands.json",
 	"C_Cpp.codeAnalysis.clangTidy.checks.enabled": [
-		"clang-analyzer-core.*",
-		"clang-analyzer-cplusplus.*",
-		"clang-analyzer-nullablity.*",
 		"bugprone-*",
-		"clang-analyzer-unix.*",
 		"llvm-include-order",
 		"modernize-use-*",
-		"performance-*"
+		"performance-*",
+		"misc-unused-*"
 	],
 	"editor.wordWrapColumn": 100,
 	"editor.rulers": [
@@ -55,4 +50,13 @@
 	"C_Cpp.vcFormat.indent.gotoLabels": "leftmostColumn",
 	"editor.indentSize": "tabSize",
 	"astyle.cpp.enable": false,
+	"rust-analyzer.cargo.buildScripts.invocationLocation": "root",
+	"window.menuBarVisibility": "toggle",
+	"editor.guides.bracketPairs": "active",
+	"indentRainbow.indicatorStyle": "light",
+	"window.titleBarStyle": "custom",
+	"window.title": "${dirty}${activeEditorShort}${separator}${rootName}${separator}${profileName}",
+	"terminal.integrated.fontFamily": "Inconsolata",
+	"workbench.iconTheme": "vscode-icons",
+	"editor.fontSize": 13,
 }

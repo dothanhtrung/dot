@@ -8,5 +8,10 @@
     "editor.fontFamily": "'Source Code Pro', 'monospace', monospace",
     "cmake.buildDirectory": "${workspaceFolder}/cmake-build/${buildKit}/${buildType}",
     "cmake.copyCompileCommands": "${workspaceFolder}/compile_commands.json",
-    "editor.inlayHints.fontSize": 12
+    "editor.inlayHints.fontSize": 12,
+    "window.menuBarVisibility": "toggle",
+    "indentRainbow.indicatorStyle": "light",
+    "window.titleBarStyle": "custom",
+    "window.title": "${dirty}${activeEditorShort}${separator}${rootName}${separator}${profileName}",
+    "terminal.integrated.fontFamily": "Inconsolata"
 }
