@@ -29,7 +29,8 @@
 	"C_Cpp.codeAnalysis.clangTidy.enabled": true,
 	"clangd.arguments": [
 		"--pretty",
-		"--background-index"
+		"--background-index",
+		"--header-insertion=never"
 	],
 	"cmake.copyCompileCommands": "${workspaceFolder}/compile_commands.json",
 	"C_Cpp.codeAnalysis.clangTidy.checks.enabled": [
@@ -59,4 +60,9 @@
 	"terminal.integrated.fontFamily": "Inconsolata",
 	"workbench.iconTheme": "vscode-icons",
 	"editor.fontSize": 13,
+	"cmake.configureArgs": [
+		"-DCMAKE_CXX_COMPILER_LAUNCHER=sccache",
+		"-DCMAKE_C_COMPILER_LAUNCHER=sccache"
+	],
+	"editor.formatOnSave": true,
 }

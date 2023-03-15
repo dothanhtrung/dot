@@ -59,6 +59,7 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 set completeopt=menu,menuone,preview,noselect,noinsert
 let g:ale_completion_enabled = 1
 nnoremap <C-LeftMouse> :ALEGoToDefinition<CR>
+nnoremap <C-b> :ALEGoToDefinition<CR>
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'javascript': ['eslint'],

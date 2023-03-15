@@ -3,7 +3,7 @@
     "mesonbuild.buildFolder": "build",
     "editor.fontSize": 13,
     "cmake.configureOnOpen": false,
-    "editor.renderWhitespace": "all", 
+    "editor.renderWhitespace": "all",
     "editor.minimap.autohide": true,
     "editor.fontFamily": "'Source Code Pro', 'monospace', monospace",
     "cmake.buildDirectory": "${workspaceFolder}/cmake-build/${buildKit}/${buildType}",
@@ -13,5 +13,13 @@
     "indentRainbow.indicatorStyle": "light",
     "window.titleBarStyle": "custom",
     "window.title": "${dirty}${activeEditorShort}${separator}${rootName}${separator}${profileName}",
-    "terminal.integrated.fontFamily": "Inconsolata"
+    "terminal.integrated.fontFamily": "Inconsolata",
+    "terminal.integrated.localEchoExcludePrograms": [
+        "vim",
+        "vi",
+        "nano",
+        "tmux",
+        "hx"
+    ],
+    "git.terminalAuthentication": false
 }
