@@ -1,24 +1,30 @@
 // Place your key bindings in this file to override the defaults
 [
-    {
-        "key": "shift+f10",
-        "command": "workbench.action.debug.run",
-        "when": "debuggersAvailable && debugState != 'initializing'"
-    },
-    {
-        "key": "ctrl+f5",
-        "command": "-workbench.action.debug.run",
-        "when": "debuggersAvailable && debugState != 'initializing'"
-    },
-    {
-        "key": "shift+alt+l",
-        "command": "editor.action.formatDocument",
-        "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
-    },
-    {
-        "key": "ctrl+alt+l",
-        "command": "-editor.action.formatDocument",
-        "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+	{
+		"key": "shift+f10",
+		"command": "workbench.action.tasks.runTask",
+		"args": "remote_run",
+		"when": "config.workspaceKeybindings.RemoteRun.enabled"
+	},
+	{
+		"key": "shift+f10",
+		"command": "workbench.action.debug.run",
+		"when": "!config.workspaceKeybindings.RemoteRun.enabled && debuggersAvailable && debugState != 'initializing'"
+	},
+	{
+		"key": "ctrl+f5",
+		"command": "-workbench.action.debug.run",
+		"when": "debuggersAvailable && debugState != 'initializing'"
+	},
+	{
+		"key": "shift+alt+l",
+		"command": "editor.action.formatDocument",
+		"when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+	},
+	{
+		"key": "ctrl+alt+l",
+		"command": "-editor.action.formatDocument",
+		"when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
 	},
 	{
 		"key": "ctrl+9",
@@ -35,7 +41,7 @@
 	{
 		"key": "shift+f10",
 		"command": "cmake.launchTarget",
-		"when": "cmake:enableFullFeatureSet && !cmake:hideDebugCommand && !inDebugMode"
+		"when": "!config.workspaceKeybindings.RemoteRun.enabled && cmake:enableFullFeatureSet && !cmake:hideDebugCommand && !inDebugMode"
 	},
 	{
 		"key": "shift+f5",
@@ -61,5 +67,15 @@
 		"key": "ctrl+shift+c",
 		"command": "-copyFilePath",
 		"when": "!editorFocus"
+	},
+	{
+		"key": "ctrl+9",
+		"command": "cmake.build",
+		"when": "cmake:enableFullFeatureSet && !cmake:hideBuildCommand"
+	},
+	{
+		"key": "f7",
+		"command": "-cmake.build",
+		"when": "cmake:enableFullFeatureSet && !cmake:hideBuildCommand"
 	}
 ]

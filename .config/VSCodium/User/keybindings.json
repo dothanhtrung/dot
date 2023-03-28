@@ -1,9 +1,15 @@
 // Place your key bindings in this file to override the defaults
 [
+	{
+		"key": "shift+f10",
+		"command": "workbench.action.tasks.runTask",
+		"args": "rust: cargo run",
+		"when": "config.workspaceKeybindings.CargoTask.enabled"
+	},
     {
         "key": "shift+f10",
         "command": "workbench.action.debug.run",
-        "when": "debuggersAvailable && debugState != 'initializing'"
+        "when": "!config.workspaceKeybindings.CargoTask.enabled && debuggersAvailable && debugState != 'initializing'"
     },
     {
         "key": "ctrl+f5",
@@ -35,7 +41,7 @@
 	{
 		"key": "shift+f10",
 		"command": "cmake.launchTarget",
-		"when": "cmake:enableFullFeatureSet && !cmake:hideDebugCommand && !inDebugMode"
+		"when": "!config.workspaceKeybindings.CargoTask.enabled && cmake:enableFullFeatureSet && !cmake:hideDebugCommand && !inDebugMode "
 	},
 	{
 		"key": "shift+f5",
