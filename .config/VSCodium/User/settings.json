@@ -21,5 +21,7 @@
         "tmux",
         "hx"
     ],
-    "git.terminalAuthentication": false
+    "git.terminalAuthentication": false,
+    "http.proxyStrictSSL": false,
+    "git.alwaysSignOff": true
 }

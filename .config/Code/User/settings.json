@@ -38,7 +38,11 @@
 		"llvm-include-order",
 		"modernize-use-*",
 		"performance-*",
-		"misc-unused-*"
+		"misc-unused-*",
+		"cppcoreguidelines-*",
+		"performance-move-*",
+		"performance-unnecessary-*",
+		"modernize-*"
 	],
 	"editor.wordWrapColumn": 100,
 	"editor.rulers": [
@@ -64,4 +68,7 @@
 		"-DCMAKE_CXX_COMPILER_LAUNCHER=sccache",
 		"-DCMAKE_C_COMPILER_LAUNCHER=sccache"
 	],
+	"explorer.confirmDelete": false,
+	"git.alwaysSignOff": true,
+	"files.autoGuessEncoding": true,
 }
