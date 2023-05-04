@@ -24,7 +24,7 @@
 	"C_Cpp.autocompleteAddParentheses": true,
 	"qttools.loglevel": "warning",
 	"C_Cpp.intelliSenseEngineFallback": "enabled",
-	"cmake.buildDirectory": "${workspaceFolder}/.vscode-build/${buildKit}/${buildType}",
+	"cmake.buildDirectory": "${workspaceFolder}/.build/${buildKit}/${buildType}",
 	"C_Cpp.intelliSenseEngine": "disabled",
 	"C_Cpp.codeAnalysis.clangTidy.enabled": true,
 	"clangd.arguments": [
@@ -36,13 +36,11 @@
 	"C_Cpp.codeAnalysis.clangTidy.checks.enabled": [
 		"bugprone-*",
 		"llvm-include-order",
-		"modernize-use-*",
 		"performance-*",
 		"misc-unused-*",
 		"cppcoreguidelines-*",
-		"performance-move-*",
-		"performance-unnecessary-*",
-		"modernize-*"
+		"modernize-*",
+		"clang-analyzer-*"
 	],
 	"editor.wordWrapColumn": 100,
 	"editor.rulers": [
@@ -64,11 +62,7 @@
 	"terminal.integrated.fontFamily": "Inconsolata",
 	"workbench.iconTheme": "vscode-icons",
 	"editor.fontSize": 13,
-	"cmake.configureArgs": [
-		"-DCMAKE_CXX_COMPILER_LAUNCHER=sccache",
-		"-DCMAKE_C_COMPILER_LAUNCHER=sccache"
-	],
 	"explorer.confirmDelete": false,
 	"git.alwaysSignOff": true,
-	"files.autoGuessEncoding": true,
+	"files.autoGuessEncoding": true
 }
