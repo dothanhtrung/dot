@@ -18,3 +18,4 @@ alias dd="dd status=progress"
 alias rsync="rsync --progress"
 alias icat="kitty +kitten icat"
 
+alias hx="hx --log /tmp/helix.log"

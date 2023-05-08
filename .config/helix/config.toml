@@ -1,5 +1,8 @@
 theme = "gruvbox_dark_hard"
 
+[editor]
+true-color = true
+
 [editor.whitespace.render]
 space = "all"
 newline = "all"
