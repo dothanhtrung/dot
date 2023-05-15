@@ -19,3 +19,18 @@ space = "·"
 render = true
 character = "▏"
 skip-levels = 1
+
+[keys.normal]
+A-L = ":format"
+C-A-left = "jump_backward"
+C-A-right = "jump_forward"
+C-b = "goto_definition"
+C-d = ["extend_line_below", "yank_joined_to_clipboard", "paste_clipboard_after", "goto_line_start"]
+C-s = [":w"]
+"C-/" = "toggle_comments"
+tab = "indent"
+S-tab = "unindent"
+
+[keys.insert]
+C-s = ["normal_mode", ":w"]
+"C-/" = "toggle_comments"
