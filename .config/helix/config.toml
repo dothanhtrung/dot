@@ -20,6 +20,9 @@ render = true
 character = "▏"
 skip-levels = 1
 
+[editor.soft-wrap]
+enable = true
+
 [keys.normal]
 A-L = ":format"
 C-A-left = "jump_backward"

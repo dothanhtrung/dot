@@ -14,7 +14,7 @@
 	"editor.renderWhitespace": "all",
 	"vsicons.dontShowNewVersionMessage": true,
 	"cmake.configureOnOpen": false,
-	"mesonbuild.buildFolder": ".vscode-build",
+	"mesonbuild.buildFolder": ".meson-build",
 	"editor.inlayHints.fontSize": 11,
 	"editor.codeActionsOnSave": {},
 	"editor.minimap.enabled": false,
@@ -24,7 +24,7 @@
 	"C_Cpp.autocompleteAddParentheses": true,
 	"qttools.loglevel": "warning",
 	"C_Cpp.intelliSenseEngineFallback": "enabled",
-	"cmake.buildDirectory": "${workspaceFolder}/.build/${buildKit}/${buildType}",
+	"cmake.buildDirectory": "${workspaceFolder}/.cmake-build/${buildKit}/${buildType}",
 	"C_Cpp.intelliSenseEngine": "disabled",
 	"C_Cpp.codeAnalysis.clangTidy.enabled": true,
 	"clangd.arguments": [
