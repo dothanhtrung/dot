@@ -64,6 +64,5 @@
 	"editor.fontSize": 13,
 	"explorer.confirmDelete": false,
 	"git.alwaysSignOff": true,
-	"files.autoGuessEncoding": true,
-	"editor.formatOnSave": true
+	"files.autoGuessEncoding": true
 }
