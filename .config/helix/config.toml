@@ -36,5 +36,6 @@ S-tab = "unindent"
 'del' = "delete_selection"
 
 [keys.insert]
+A-L = ":format"
 C-s = ["normal_mode", ":w"]
 'C-/' = "toggle_comments"

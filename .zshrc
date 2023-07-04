@@ -71,7 +71,7 @@ CASE_SENSITIVE="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git rust sudo zsh-autosuggestions zsh-syntax-highlighting docker docker-compose tmux svn)
+plugins=(git rust sudo zsh-autosuggestions zsh-syntax-highlighting docker docker-compose tmux svn zoxide)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -126,3 +126,4 @@ export XMODIFIERS="@im=ibus"
 
 export EDITOR="/usr/bin/vim"
 #export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export DOCKER_HOST=”unix://$XDG_RUNTIME_DIR/podman/podman.sock”
