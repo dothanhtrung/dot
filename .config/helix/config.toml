@@ -30,12 +30,18 @@ C-A-right = "jump_forward"
 C-b = "goto_definition"
 C-d = ["extend_line_below", "yank_joined_to_clipboard", "paste_clipboard_after", "goto_line_start"]
 C-s = [":w"]
+C-q = [":q"]
+C-F = "global_search"
 'C-/' = "toggle_comments"
 tab = "indent"
 S-tab = "unindent"
 'del' = "delete_selection"
+S-F10 = [":wa", ":sh zellij run -d right -- run_project.sh &> /dev/null || true"]
+C-9 = [":wa", ":sh zellij run -d right -- build_project.sh &> /dev/null || true"]
 
 [keys.insert]
 A-L = ":format"
 C-s = ["normal_mode", ":w"]
 'C-/' = "toggle_comments"
+S-tab = "unindent"
+C-space = "completion"
