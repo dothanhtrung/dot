@@ -23,6 +23,10 @@ skip-levels = 1
 [editor.soft-wrap]
 enable = true
 
+[editor.lsp]
+enable = true
+display-inlay-hints = true
+
 [keys.normal]
 A-L = ":format"
 C-A-left = "jump_backward"
