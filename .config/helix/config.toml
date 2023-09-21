@@ -15,6 +15,9 @@ nbsp = "⍽"
 newline = "⏎"
 space = "·"
 
+[editor.file-picker]
+hidden = false
+
 [editor.indent-guides]
 render = true
 character = "▏"

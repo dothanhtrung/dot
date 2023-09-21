@@ -81,5 +81,25 @@
 	{
 		"key": "ctrl+2",
 		"command": "workbench.action.tasks.terminate"
+	},
+	{
+		"key": "shift+f10",
+		"command": "workbench.action.debug.run",
+		"when": "debuggersAvailable && !inDebugMode && !terminalFocus"
+	},
+	{
+		"key": "shift+f9",
+		"command": "-workbench.action.debug.run",
+		"when": "debuggersAvailable && !inDebugMode && !terminalFocus"
+	},
+	{
+		"key": "shift+f9",
+		"command": "workbench.action.debug.start",
+		"when": "debuggersAvailable && debugState == 'inactive'"
+	},
+	{
+		"key": "f5",
+		"command": "-workbench.action.debug.start",
+		"when": "debuggersAvailable && debugState == 'inactive'"
 	}
 ]

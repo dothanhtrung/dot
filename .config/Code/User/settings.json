@@ -64,5 +64,10 @@
 	"editor.fontSize": 13,
 	"explorer.confirmDelete": false,
 	"git.alwaysSignOff": true,
-	"files.autoGuessEncoding": true
+	"files.autoGuessEncoding": true,
+	"dotnetAcquisitionExtension.enableTelemetry": false,
+	"dotnetAcquisitionExtension.existingDotnetPath": [
+		"/usr/lib64/dotnet/sdk"
+	],
+	"cmake.installPrefix": "${workspaceFolder}/.cmake-build/_install"
 }
