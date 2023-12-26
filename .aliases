@@ -20,3 +20,4 @@ alias rsync="rsync --progress"
 alias icat="kitty +kitten icat"
 
 alias hx="hx --log /tmp/helix.log"
+alias yt-dlp='yt-dlp --no-mtime -w --cookies-from-browser firefox::none'
