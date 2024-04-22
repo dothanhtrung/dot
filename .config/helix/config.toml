@@ -43,8 +43,8 @@ C-F = "global_search"
 tab = "indent"
 S-tab = "unindent"
 'del' = "delete_selection"
-S-F10 = [":wa", ":sh zellij run -d right -- run_project.sh &> /dev/null || true"]
-C-9 = [":wa", ":sh zellij run -d right -- build_project.sh &> /dev/null || true"]
+S-F10 = [":wa", ":sh zellij run -d right -- run_project.sh %{filename} &> /dev/null || true"]
+C-9 = [":wa", ":sh zellij run -d right -- build_project.sh %{filename} &> /dev/null || true"]
 
 [keys.insert]
 A-L = ":format"

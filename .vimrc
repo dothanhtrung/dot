@@ -43,7 +43,7 @@ function! XTermPasteBegin()
   return ""
 endfunction
 
-set listchars=eol:¬,tab:>—,trail:~,extends:>,precedes:<
+set listchars=tab:>—,trail:~,extends:>,precedes:<
 set list
 
 "autocmd vimenter * ++nested colorscheme gruvbox8_hard
