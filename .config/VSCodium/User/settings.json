@@ -23,5 +23,12 @@
     ],
     "git.terminalAuthentication": false,
     "http.proxyStrictSSL": false,
-    "git.alwaysSignOff": true
+    "editor.minimap.enabled": false,
+    "rust-analyzer.check.command": "clippy",
+    "rust-analyzer.check.extraArgs": [
+        "--target-dir=target/rust-analyzer"
+    ],
+    "rust-analyzer.check.extraEnv": {
+        "CARGO_TARGET_DIR": "target/rust-analyzer"
+    }
 }
