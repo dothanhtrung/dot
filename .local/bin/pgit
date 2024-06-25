@@ -1,0 +1,8 @@
+#!/bin/bash
+
+export GIT_COMMITTER_EMAIL=dothanhtrung@pm.me
+#export GIT_COMMITTER_NAME="kim tinh"
+export GIT_AUTHOR_EMAIL=dothanhtrung@pm.me
+#export GIT_AUTHOR_NAME="kim tinh"
+
+git "$@"

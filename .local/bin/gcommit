@@ -1,5 +1,0 @@
-#!/bin/bash
-
-export GIT_COMMITTER_EMAIL=dothanhtrung@pm.me
-
-git commit --author "Trung Do <dothanhtrung@pm.me>" -m "$@"
