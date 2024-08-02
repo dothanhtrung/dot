@@ -1,0 +1,8 @@
+[font]
+size = 10.0
+
+[font.normal]
+family = "Noto Sans Mono"
+
+[window]
+opacity = 0.9
