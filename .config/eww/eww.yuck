@@ -1,29 +1,68 @@
+(defvar time_rev false)
+
 (defwidget bar []
   (centerbox :orientation "h"
     (workspaces)
     (music)
-    (sidestuff)))
+    (sidestuff)
+    ))
 
 (defwidget sidestuff []
   (box :class "sidestuff" :orientation "h" :space-evenly false :halign "end"
     (metric :label "🔊"
             :value volume
             :onchange "amixer -D pulse sset Master {}%")
-    (metric :label ""
-            :value {EWW_RAM.used_mem_perc}
-            :onchange "")
-    (metric :label "💾"
+    (metric :label "🖴"
             :value {round((1 - (EWW_DISK["/"].free / EWW_DISK["/"].total)) * 100, 0)}
             :onchange "")
-    time))
+    (sep)
+    (mem)
+    (sep)
+    (systray)
+    (sep)
+    (clock_module)  
+    )
+)
+
+(defwidget mem []
+		(box :class "mem_module" :vexpand "false" :hexpand "false" 
+            (circular-progress :value {EWW_RAM.used_mem_perc}
+                :class "membar"
+                :thickness 4
+            (button 
+                :class "iconmem"
+                :limit-width 2
+                :tooltip "using ${round(EWW_RAM.used_mem / 1024 / 1024, 0)}M"
+                :onclick "$HOME/.config/eww/scripts/pop system_pop"
+                :show_truncated false
+                :wrap false
+                ""))))
+
+
+(defwidget sep []
+  (box :class "module-2" :vexpand "false" :hexpand "false"
+    (label :class "separ" :text "|")))
+
+
+
+(defwidget clock_module []
+  (eventbox 
+             :onclick "$HOME/.config/eww/scripts/pop calendar_pop" 
+    (box :class "module" :space-evenly "false" :orientation "h" :spacing "3" 
+      (label :text clock_time :class "clock_time_class" )
+      (label :text ":" :class "clock_time_sep" )
+      (label :text clock_minute :class "clock_minute_class")
+      (label :text clock_date :class "clock_date_class")
+  )))
 
 (deflisten workspaces :initial "[]" "bash ~/.config/eww/scripts/get-workspaces")
 (deflisten current_workspace :initial "1" "bash ~/.config/eww/scripts/get-active-workspace")
 (defwidget workspaces []
-  (eventbox :onscroll "bash ~/.config/eww/scripts/change-active-workspace {} ${current_workspace}" :class "workspaces-widget"
+  (eventbox :onscroll "bash ~/.config/eww/scripts/change-active-workspace {} ${current_workspace}"
     (box :space-evenly true
          :spacing 10
          :halign "start"
+         :class "workspaces-widget"
       (label :text "${workspaces}${current_workspace}" :visible false)
       (for workspace in workspaces
         (eventbox :onclick "hyprctl dispatch workspace ${workspace.id}"
@@ -36,6 +75,38 @@
     )
   )
   
+(defwidget system []
+  (box :class "sys_win" :orientation "v" :space-evenly "false" :hexpand "false" :vexpand "false" :spacing 0
+  (box :class "sys_mem_box" :orientation "h" :space-evenly "false" :halign "start"
+      (circular-progress :value {EWW_RAM.used_mem_perc}
+                :class "sys_mem"
+                :thickness 9
+            (label :text ""
+                :class "sys_icon_mem"
+                :limit-width 2
+                :show_truncated false
+                :wrap false
+                :angle 0.0))
+            (box :orientation "v" :space-evenly "false" :spacing 0 :hexpand "false" :vexpand "false"
+            (label :text "memory"
+                :halign "start"
+                :class "sys_text_mem"
+                :limit-width 9
+                :show_truncated false
+                :wrap false)
+            (label :text "${round(EWW_RAM.used_mem/1024/1024,0)} | ${round(EWW_RAM.total_mem/1024/1024,0)}M "
+                :halign "start"
+                :class "sys_text_mem_sub"
+                :limit-width 22
+                :show_truncated false
+                :wrap false)
+            (label :text "${round(EWW_RAM.free_mem/1024/1024,0)}M free"
+                :halign "start"
+                :class "sys_text_mem_sub"
+                :limit-width 22
+                :show_truncated false
+                :wrap false)))))
+
 (defwidget music []
   (box :class "music"
        :orientation "h"
@@ -66,15 +137,48 @@
 (defpoll time :interval "10s"
   "date '+%H:%M %b %d, %Y'")
 
+(defpoll clock_time :interval "5m" "date +\%I")
+(defpoll clock_minute :interval "5s" "date +\%M")
+(defpoll clock_date :interval "10h" "date '+%d/%m'")
+
 (defwindow bar
   :monitor 0
-  ; :windowtype "dock"
+  :stacking "fg"
+  :windowtype "dock"
   :exclusive true
   :focusable false
   :geometry (geometry :x "0%"
-                      :y "0%"
+                      :y "1px"
                       :width "99%"
-                      :height "10px"
+                      :height "2%"
                       :anchor "top center")
-  :reserve (struts :side "top" :distance "4%")
+  ; :reserve (struts :side "top" :distance "4%")
   (bar))
+
+(defpoll calendar_day :interval "20h" "date '+%d'")
+(defpoll calendar_year :interval "20h" "date '+%Y'")
+
+(defwidget cal []
+	(box :class "cal" :orientation "v"
+	(box :class "cal-in"
+	(calendar :class "cal" 
+			  :day calendar_day 
+			  :year calendar_year))))
+
+(defwindow calendar_pop
+  :monitor 0
+	:geometry (geometry :x "0.5%" 
+          						:y "0.5%" 
+                      :anchor "top right"
+					          	:width "270px" 
+          						:height "60px")
+(cal))
+
+(defwindow system_pop
+  :monitor 0
+	:geometry (geometry :x "8.5%" 
+						:y "0.5%" 
+            :anchor "top right"
+						:width "160px" 
+						:height "80px")
+(system))

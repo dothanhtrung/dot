@@ -1,0 +1,18 @@
+#!/bin/bash
+
+LOCK_FILE=/tmp/eww_popup.lock
+POPUP_LIST=(system_pop music_pop audio_pop calendar_pop)
+
+eww close ${POPUP_LIST[*]}
+for i in "${POPUP_LIST[@]}"; do
+	if [ "$i" == "$1" ]; then
+		if [ -f ${LOCK_FILE}.$i ]; then
+			rm -f ${LOCK_FILE}.$i
+		else
+			eww open $1
+			touch ${LOCK_FILE}.$i
+		fi
+	else
+		rm -f ${LOCK_FILE}.$i
+	fi
+done
