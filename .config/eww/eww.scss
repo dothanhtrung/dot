@@ -61,14 +61,25 @@
 
 .membar {
   color: #e0b089;
-    background-color: #38384d;
+  background-color: #38384d;
   border-radius: 10px;
 }
+.cpubar {
+  color: #cc241d;
+  background-color: #38384d;
+  border-radius: 10px;
+}
+
 
 .iconmem {
   font-size: 15;
   margin: 6px;
 }
+.iconcpu {
+  font-size: 15;
+  margin: 6px;
+}
+
 
 .separ {
     color: #3e424f;
@@ -103,6 +114,30 @@
 	border-radius: 16px;
     margin: 10px 10px 10px 10px;
   }
+
+.sys_cpu {
+  color: #e4c9af;
+  background-color: #38384d;
+  border-radius: 10px;
+}
+
+.sys_icon_cpu, .sys_text_cpu {
+    color: #e4c9af;
+}
+
+.sys_icon_cpu {
+  margin: 5px 5px 5px 5px;
+}
+
+.sys_text_cpu_sub, .sys_text_cpu{
+  margin: 0px 0px 0px 10px;
+}
+
+.sys_cpu_box {
+	border-radius: 16px;
+    margin: 10px 10px 10px 10px;
+  }
+
 
 .sys_sep {
     color: #38384d;
@@ -145,9 +180,16 @@ tooltip label {
 }
 
 .mem_module {
-  background-color: #0f0f17;
+  background-color: rgba(#1d2021, 0.75);
 	border-radius: 16px;
+  margin: 0px 0px 0px 5px
 }
+.cpu_module {
+  background-color: rgba(#1d2021, 0.75);
+	border-radius: 16px;
+  margin: 0px 5px 0px 0px
+}
+
 
 .workspaces-widget {
   margin: 0px 0px 0px 10px;

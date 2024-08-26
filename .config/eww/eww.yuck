@@ -16,6 +16,7 @@
             :value {round((1 - (EWW_DISK["/"].free / EWW_DISK["/"].total)) * 100, 0)}
             :onchange "")
     (sep)
+    (cpu)
     (mem)
     (sep)
     (systray)
@@ -34,6 +35,19 @@
                 :limit-width 2
                 :tooltip "using ${round(EWW_RAM.used_mem / 1024 / 1024, 0)}M"
                 :onclick "$HOME/.config/eww/scripts/pop system_pop"
+                :show_truncated false
+                :wrap false
+                ""))))
+(defwidget cpu []
+		(box :class "cpu_module" :vexpand "false" :hexpand "false" 
+            (circular-progress :value {EWW_CPU.avg}
+                :class "cpubar"
+                :thickness 4
+            (button 
+                :class "iconcpu"
+                :limit-width 2
+                ; :tooltip "using ${round(EWW_RAM.used_mem / 1024 / 1024, 0)}M"
+                :onclick "$HOME/.config/eww/scripts/pop cpu_pop"
                 :show_truncated false
                 :wrap false
                 ""))))
