@@ -71,7 +71,7 @@ CASE_SENSITIVE="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git rust sudo zsh-autosuggestions zsh-syntax-highlighting docker docker-compose tmux svn zoxide zellij)
+plugins=(git rust sudo zsh-autosuggestions zsh-syntax-highlighting docker docker-compose tmux svn zoxide mosh)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -120,10 +120,22 @@ export JAVA_HOME=/usr/lib/jvm/java-openjdk
 
 export HISTSIZE=10000
 
-export GTK_IM_MODULE=ibus
-export QT_IM_MODULE=ibus
-export XMODIFIERS="@im=ibus"
+# export GTK_IM_MODULE=ibus
+# export QT_IM_MODULE=ibus
+# export XMODIFIERS="@im=ibus"
 
-export EDITOR="/usr/bin/hx"
+export EDITOR="/usr/bin/vim"
 #export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-export DOCKER_HOST=”unix://$XDG_RUNTIME_DIR/podman/podman.sock”
+# export DOCKER_HOST=”unix://$XDG_RUNTIME_DIR/podman/podman.sock”
+
+#export WGPU_BACKEND=vulkan
+
+export PATH="$PATH:$HOME/.npm-global/bin"
+
+#export GPG_TTY=$(tty)
+
+if [ -n "${ZSH_VERSION-}" ] && { [ -e /run/.containerenv ] || [ -e /.dockerenv ]; }; then
+	command_not_found_handler() {
+		distrobox-host-exec "${@}"
+	}
+fi
