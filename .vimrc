@@ -68,6 +68,9 @@ let g:ale_fixers = {
 let g:ale_linters = {
 \  'rust': ['analyzer'],
 \}
+nnoremap <C-d> :ALEGoToDefinition<CR>
+nnoremap <S-F6> :ALERename<CR>
+nnoremap <C-S-f> :ALESymbolSearch
 
 " Rust
 let g:rustfmt_autosave = 1
@@ -95,6 +98,15 @@ autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
 set hidden
 nnoremap <C-N> :bnext<CR>
 nnoremap <C-P> :bprev<CR>
+
+" SHORTCUT
+" nnoremap <C-A-Left> <C-o>
+" nnoremap <C-A-Right> <C-i>
+" nnoremap <A-1> :NERDTreeToggle<CR>
+
+" Allow :w!! save file as root
+cmap w!! w !sudo tee > /dev/null %
+
 
 " Load all plugins now.
 " Plugins need to be added to runtimepath before helptags can be generated.
