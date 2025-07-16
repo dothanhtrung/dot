@@ -1,0 +1,4 @@
+period_size = 32
+periods = 4
+allow-moves = true
+hrtf = true
