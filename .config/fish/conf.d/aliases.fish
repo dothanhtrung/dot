@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 abbr less "vim -u ~/.vim/less.vim -"
 abbr more "vim -u ~/.vim/less.vim"
 
@@ -21,3 +22,12 @@ abbr icat "kitty +kitten icat"
 
 abbr hx "hx --log /tmp/helix.log"
 abbr yt-dlp 'yt-dlp --no-mtime -w --cookies-from-browser firefox::none'
+#alias ssh mosh
+
+abbr -a hibernate "sudo systemctl hibernate"
+
+abbr -a diff "diff --color"
+abbr -a unzipjp "unzip -O shift-jis"
+
+#alias docker podman
+#alias docker-compose podman-compose
