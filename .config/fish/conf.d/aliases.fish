@@ -11,7 +11,7 @@ abbr cat "bat -p"
 abbr ls eza
 abbr rg "rg -uuu -L"
 abbr cd z
-abbr fd "fd -I"
+abbr fd "fd -I -g"
 abbr la "ls -a"
 abbr ll "ls -l"
 

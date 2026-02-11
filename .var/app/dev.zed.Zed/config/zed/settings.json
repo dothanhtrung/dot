@@ -1,0 +1,113 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "edit_predictions": {
+    "provider": "copilot"
+  },
+  "lsp_document_colors": "background",
+  "message_editor": {
+    "auto_replace_emoji_shortcode": false,
+  },
+  "agent_servers": {
+    "github-copilot": {
+      "type": "registry",
+    },
+  },
+  "tabs": {
+    "file_icons": true,
+  },
+  "title_bar": {
+    "show_branch_icon": true,
+  },
+  "auto_update_extensions": {
+    "crates-lsp": false,
+  },
+  "prettier": {
+    "allowed": true,
+  },
+  "icon_theme": "VSCode Icons for Zed (Dark Official Icons)",
+  "agent_ui_font_size": 13.0,
+  "ui_font_weight": 300.0,
+  "ui_font_family": "JetBrainsMono Nerd Font",
+  "format_on_save": "off",
+  "show_whitespaces": "all",
+  "inlay_hints": {
+    "show_background": false,
+    "enabled": true,
+  },
+  "languages": {
+    "Python": {
+      "language_servers": ["ty", "ruff", "!basedpyright"],
+      "format_on_save": "off",
+      "preferred_line_length": 100,
+    },
+    "Rust": {
+      "colorize_brackets": true,
+      "ensure_final_newline_on_save": false,
+      "remove_trailing_whitespace_on_save": false,
+      "inlay_hints": {
+        "show_background": true,
+        "enabled": true,
+      },
+    },
+  },
+  "lsp": {
+    "rust-analyzer": {
+      "initialization_options": {
+        "check": {
+          "command": "clippy",
+        },
+      },
+    },
+  },
+  "diagnostics_max_severity": "warning",
+  "diagnostics": {
+    "inline": {
+      "enabled": true,
+    },
+  },
+  "ssh_connections": [
+    {
+      "host": "build4",
+      "args": [],
+      "projects": [
+        {
+          "paths": ["/home/trungdt/image-recipes"],
+        },
+      ],
+    },
+  ],
+  "agent": {
+    "default_profile": "write",
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "gpt-5-mini",
+    },
+    "single_file_review": true,
+    "model_parameters": [],
+    "enable_feedback": false,
+  },
+  "disable_ai": false,
+  "auto_update": false,
+  "outline_panel": {
+    "dock": "right",
+  },
+  "base_keymap": "JetBrains",
+  "telemetry": {
+    "metrics": false,
+    "diagnostics": false,
+  },
+  "ui_font_size": 14.0,
+  "buffer_font_size": 12.0,
+  "buffer_font_family": "JetBrainsMonoNL Nerd Font Mono",
+  "buffer_font_weight": 100.0,
+  "buffer_line_height": "standard",
+  "theme": "Gruvbox Crisp Highest Contrast",
+  "proxy": "http://10.116.41.94:3128",
+}
