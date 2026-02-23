@@ -7,6 +7,7 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "remove_trailing_whitespace_on_save": false,
   "edit_predictions": {
     "provider": "copilot"
   },
@@ -42,27 +43,30 @@
     "enabled": true,
   },
   "languages": {
+    "C++": {
+      "tab_size": 8
+    },
+    "C": {
+      "hard_tabs": true,
+      "tab_size": 8
+    },
+    "Markdown": {
+      "tab_size": 4
+    },
+    "Markdown-Inline": {
+      "tab_size": 4
+    },
     "Python": {
       "language_servers": ["ty", "ruff", "!basedpyright"],
-      "format_on_save": "off",
       "preferred_line_length": 100,
     },
     "Rust": {
       "colorize_brackets": true,
       "ensure_final_newline_on_save": false,
-      "remove_trailing_whitespace_on_save": false,
+      "remove_trailing_whitespace_on_save": true,
       "inlay_hints": {
         "show_background": true,
         "enabled": true,
-      },
-    },
-  },
-  "lsp": {
-    "rust-analyzer": {
-      "initialization_options": {
-        "check": {
-          "command": "clippy",
-        },
       },
     },
   },

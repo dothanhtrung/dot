@@ -1,10 +1,10 @@
 local wezterm = require 'wezterm'
-
+local act = wezterm.action
 local config = wezterm.config_builder()
 
 config.color_scheme = 'Gruvbox dark, hard (base16)'
 
--- config.font = wezterm.font 'JetBrainsMono Nerd Font'
+config.font = wezterm.font 'JetBrainsMono Nerd Font'
 config.font_size = 9.0
 config.harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' }
 
@@ -35,6 +35,10 @@ config.colors = {
     -- The color of the inactive tab bar edge/divider
     -- inactive_tab_edge = '#575757',
   },
+}
+
+config.keys = {
+  { key = 'V', mods = 'CTRL', action = act.PasteFrom 'Clipboard' },
 }
 
 config.hide_tab_bar_if_only_one_tab = true
