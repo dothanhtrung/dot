@@ -1,0 +1,5 @@
+
+[modules]
+left = [ [ "Workspaces" ] ]
+center = [ "WindowTitle" ]
+right = [ "SystemInfo", [  "Tray" ], [ "Settings", "Tempo" ] ]
