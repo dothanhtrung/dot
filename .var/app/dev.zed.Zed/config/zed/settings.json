@@ -10,9 +10,18 @@
   "remove_trailing_whitespace_on_save": false,
   "edit_predictions": {
     "mode": "subtle",
-    "provider": "copilot"
+    "provider": "copilot",
   },
   "lsp_document_colors": "background",
+  "lsp": {
+    "rust-analyzer": {
+      "initialization_options": {
+        "rust": {
+          "analyzerTargetDir": true,
+        },
+      },
+    },
+  },
   "message_editor": {
     "auto_replace_emoji_shortcode": false,
   },
@@ -45,17 +54,17 @@
   },
   "languages": {
     "C++": {
-      "tab_size": 8
+      "tab_size": 8,
     },
     "C": {
       "hard_tabs": true,
-      "tab_size": 8
+      "tab_size": 8,
     },
     "Markdown": {
-      "tab_size": 4
+      "tab_size": 4,
     },
     "Markdown-Inline": {
-      "tab_size": 4
+      "tab_size": 4,
     },
     "Python": {
       "language_servers": ["ty", "ruff", "!basedpyright"],
