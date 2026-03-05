@@ -29,5 +29,28 @@
     "bindings": {
       "ctrl-s": "workspace::SaveAll"
     }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "shift-f10": [
+        "task::Spawn",
+        {
+          "task_name": "Run Debug"
+        }
+      ]
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "alt-shift-f10": "editor::OpenContextMenu"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "shift-f10": null
+    }
   }
 ]
