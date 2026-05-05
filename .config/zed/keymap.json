@@ -52,5 +52,11 @@
     "bindings": {
       "shift-f10": null
     }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "shift shift": null
+    }
   }
 ]

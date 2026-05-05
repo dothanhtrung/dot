@@ -7,15 +7,50 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "cli_default_open_behavior": "existing_window",
+  "project_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "agent": {
+    "default_profile": "write",
+    "default_model": {
+      "provider": "x_ai",
+      "model": "grok-4-1-fast-non-reasoning",
+      "enable_thinking": false
+    },
+    "dock": "right",
+    "favorite_models": [],
+    "model_parameters": []
+  },
+  "git_panel": {
+    "dock": "left"
+  },
+  "helix_mode": false,
+  "terminal": {
+    "font_family": "JetBrainsMono Nerd Font",
+    "shell": "system",
+    "env": { "LD_LIBRARY_PATH": "" },
+  },
+  "agent_servers": {
+    "github-copilot-cli": {
+      "type": "registry"
+    }
+  },
   "remove_trailing_whitespace_on_save": false,
   "edit_predictions": {
     "mode": "subtle",
-    "provider": "copilot",
+    "provider": "none",
   },
   "lsp_document_colors": "background",
   "lsp": {
     "rust-analyzer": {
       "initialization_options": {
+        "check": {
+          "command": "clippy"
+        },
         "rust": {
           "analyzerTargetDir": true,
         },
@@ -25,16 +60,8 @@
   "message_editor": {
     "auto_replace_emoji_shortcode": false,
   },
-  "agent_servers": {
-    "github-copilot": {
-      "type": "registry",
-    },
-  },
   "tabs": {
     "file_icons": true,
-  },
-  "title_bar": {
-    "show_branch_icon": true,
   },
   "auto_update_extensions": {
     "crates-lsp": false,
@@ -42,7 +69,11 @@
   "prettier": {
     "allowed": true,
   },
-  "icon_theme": "VSCode Icons for Zed (Dark Official Icons)",
+  "icon_theme": {
+    "mode": "dark",
+    "light": "JetBrains New UI Icons (Light)",
+    "dark": "JetBrains New UI Icons (Dark)",
+  },
   "agent_ui_font_size": 13.0,
   "ui_font_weight": 300.0,
   "ui_font_family": "JetBrainsMono Nerd Font",
@@ -53,6 +84,14 @@
     "enabled": true,
   },
   "languages": {
+    "RON": {
+      "format_on_save": "on",
+      "remove_trailing_whitespace_on_save": true,
+      "preferred_line_length": 100,
+      "language_servers": ["ron-lsp"],
+      "enable_language_server": true,
+      "formatter": "language_server",
+    },
     "C++": {
       "tab_size": 8,
     },
@@ -98,16 +137,6 @@
       ],
     },
   ],
-  "agent": {
-    "default_profile": "write",
-    "default_model": {
-      "provider": "copilot_chat",
-      "model": "gpt-5-mini",
-    },
-    "single_file_review": true,
-    "model_parameters": [],
-    "enable_feedback": false,
-  },
   "disable_ai": false,
   "auto_update": false,
   "outline_panel": {
@@ -123,6 +152,6 @@
   "buffer_font_family": "JetBrainsMonoNL Nerd Font Mono",
   "buffer_font_weight": 100.0,
   "buffer_line_height": "standard",
-  "theme": "Gruvbox Crisp Highest Contrast",
-  "proxy": "http://10.116.41.94:3128",
+  "theme": "Gruvbox Crisp Anysphere Blend Dark",
+  "proxy": "http://10.116.43.167:8082",
 }
