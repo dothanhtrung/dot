@@ -35,9 +35,7 @@
     "env": { "LD_LIBRARY_PATH": "" },
   },
   "agent_servers": {
-    "github-copilot-cli": {
-      "type": "registry"
-    }
+    
   },
   "remove_trailing_whitespace_on_save": false,
   "edit_predictions": {
@@ -53,6 +51,11 @@
         },
         "rust": {
           "analyzerTargetDir": true,
+        },
+        "rustfmt": {
+          "extraArgs": [
+            "+nightly"
+          ]
         },
       },
     },
@@ -153,5 +156,5 @@
   "buffer_font_weight": 100.0,
   "buffer_line_height": "standard",
   "theme": "Gruvbox Crisp Anysphere Blend Dark",
-  "proxy": "http://10.116.43.167:8082",
+  "proxy": "http://127.0.0.1:8082",
 }
