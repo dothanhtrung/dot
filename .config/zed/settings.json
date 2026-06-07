@@ -7,26 +7,27 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "soft_wrap": "editor_width",
   "cli_default_open_behavior": "existing_window",
   "project_panel": {
-    "dock": "left"
+    "dock": "left",
   },
   "collaboration_panel": {
-    "dock": "left"
+    "dock": "left",
   },
   "agent": {
     "default_profile": "write",
     "default_model": {
       "provider": "x_ai",
       "model": "grok-4-1-fast-non-reasoning",
-      "enable_thinking": false
+      "enable_thinking": false,
     },
     "dock": "right",
     "favorite_models": [],
-    "model_parameters": []
+    "model_parameters": [],
   },
   "git_panel": {
-    "dock": "left"
+    "dock": "left",
   },
   "helix_mode": false,
   "terminal": {
@@ -34,9 +35,7 @@
     "shell": "system",
     "env": { "LD_LIBRARY_PATH": "" },
   },
-  "agent_servers": {
-    
-  },
+  "agent_servers": {},
   "remove_trailing_whitespace_on_save": false,
   "edit_predictions": {
     "mode": "subtle",
@@ -47,15 +46,13 @@
     "rust-analyzer": {
       "initialization_options": {
         "check": {
-          "command": "clippy"
+          "command": "clippy",
         },
         "rust": {
           "analyzerTargetDir": true,
         },
         "rustfmt": {
-          "extraArgs": [
-            "+nightly"
-          ]
+          "extraArgs": ["+nightly"],
         },
       },
     },
@@ -122,6 +119,11 @@
         "enabled": true,
       },
     },
+    "Slint": {
+      "formatter": {
+        "external": { "command": "slint-lsp", "arguments": ["format", "/dev/stdin"] },
+      },
+    },
   },
   "diagnostics_max_severity": "warning",
   "diagnostics": {
@@ -140,7 +142,7 @@
       ],
     },
   ],
-  "disable_ai": false,
+  "disable_ai": true,
   "auto_update": false,
   "outline_panel": {
     "dock": "right",
@@ -152,7 +154,7 @@
   },
   "ui_font_size": 14.0,
   "buffer_font_size": 12.0,
-  "buffer_font_family": "JetBrainsMonoNL Nerd Font Mono",
+  "buffer_font_family": "JetBrainsMonoNL Nerd Font",
   "buffer_font_weight": 100.0,
   "buffer_line_height": "standard",
   "theme": "Gruvbox Crisp Anysphere Blend Dark",

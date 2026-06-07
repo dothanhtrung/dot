@@ -4,6 +4,10 @@ left = [ [ "Workspaces" ], ["MediaPlayer"] ]
 center = [ "WindowTitle" ]
 right = [ "SystemInfo", "Privacy", [  "Tray" ], [ "Settings", "Tempo" ] ]
 
+[system_info]
+indicators = [ "Cpu", "Memory" ]
+interval = 5
+
 [appearance]
 opacity = 0.9
 
