@@ -1,8 +1,27 @@
 #!/bin/bash
 
+SUDO=${SUDO:-sudo}
+#SUDO=${SUDO:-pkexec}
+
 export GIT_COMMITTER_EMAIL=dothanhtrung@pm.me
 #export GIT_COMMITTER_NAME="kim tinh"
 export GIT_AUTHOR_EMAIL=dothanhtrung@pm.me
 #export GIT_AUTHOR_NAME="kim tinh"
 
-git "$@"
+if [ "$1" = "commit" ]; then
+	hour=$(date +%H)
+
+	if [ "$hour" -ge 12 ]; then
+		offset=15
+	else
+		offset=10
+	fi
+
+	new_datetime=$(date -d "-${offset} hours" +"%Y-%m-%d %H:%M:%S")
+	export new_datetime
+	$SUDO date -s "${new_datetime}"
+	git "$@"
+	$SUDO date -s "$(date -d "+${offset} hours" +"%Y-%m-%d %H:%M:%S")"
+else
+	git "$@"
+fi
