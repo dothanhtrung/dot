@@ -10,25 +10,25 @@
     "context": "Workspace",
     "bindings": {
       // "shift shift": "file_finder::Toggle"
-    }
+    },
   },
   {
     "context": "Editor",
     "bindings": {
       // "j k": ["workspace::SendKeystrokes", "escape"]
-    }
+    },
   },
   {
     "context": "Editor",
     "bindings": {
-      "alt-shift-l": "editor::Format"
-    }
+      "alt-shift-l": "editor::Format",
+    },
   },
   {
     "context": "Workspace",
     "bindings": {
-      "ctrl-s": "workspace::SaveAll"
-    }
+      "ctrl-s": "workspace::SaveAll",
+    },
   },
   {
     "context": "Workspace",
@@ -36,27 +36,43 @@
       "shift-f10": [
         "task::Spawn",
         {
-          "task_name": "Run Debug"
-        }
-      ]
-    }
-  },
-  {
-    "context": "Editor",
-    "bindings": {
-      "alt-shift-f10": "editor::OpenContextMenu"
-    }
-  },
-  {
-    "context": "Editor",
-    "bindings": {
-      "shift-f10": null
-    }
+          "task_name": "Run",
+        },
+      ],
+    },
   },
   {
     "context": "Workspace",
     "bindings": {
-      "shift shift": null
-    }
-  }
+      "ctrl-9": [
+        "task::Spawn",
+        {
+          "task_name": "Build",
+        },
+      ],
+    },
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "alt-shift-f10": "editor::OpenContextMenu",
+    },
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "shift-f10": [
+        "task::Spawn",
+        {
+          "task_name": "Run",
+        },
+      ],
+    },
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "shift shift": null,
+    },
+  },
 ]
