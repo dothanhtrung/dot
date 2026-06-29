@@ -99,7 +99,8 @@ hl.config({
         force_default_wallpaper = -1,
         disable_hyprland_logo = true,
         mouse_move_enables_dpms = false,
-        key_press_enables_dpms = true
+        key_press_enables_dpms = true,
+	disable_splash_rendering = true,
     }
 })
 
@@ -203,6 +204,10 @@ hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = tr
 
 
 -- Active resizing
+hl.bind(mainMod .. " + CTRL + right", hl.dsp.window.resize({ x = 16, y = 0, relative = true}), { repeating = true })
+hl.bind(mainMod .. " + CTRL + left", hl.dsp.window.resize({ x = -16, y = 0, relative = true}), { repeating = true })
+hl.bind(mainMod .. " + CTRL + up", hl.dsp.window.resize({ x = 0, y = 16, relative = true}), { repeating = true })
+hl.bind(mainMod .. " + CTRL + down", hl.dsp.window.resize({ x = 0, y = -16, relative = true}), { repeating = true })
 --hl.bind("CTRL_" .. mainMod, "right", "resizeactive, 20 0")
 --hl.bind("CTRL_" .. mainMod, "left", "resizeactive, -20 0")
 --hl.bind(mainMod .. "_CTRL", "up", "resizeactive, 0 -20")  -- Adjusted layout ordering safely
